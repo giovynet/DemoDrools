@@ -1,0 +1,18 @@
+package com.example.rules
+import com.example.drools.model.Person;
+
+rule "Potential Client"
+	dialect "mvel"
+    when
+        $p: Person(!isReportedByRiskCentral)
+    then
+        $p.setStatus("Oportunity");
+end
+
+rule "Descarted"
+	dialect "mvel"
+    when
+        $p: Person(isReportedByRiskCentral)
+    then
+        $p.setStatus("Risk");
+end
