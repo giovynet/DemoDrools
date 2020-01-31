@@ -66,5 +66,13 @@ public class Person {
 		this.status = status;
 	}
 
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", monthlyIncome=" + monthlyIncome + ", monthlyExpenses="
+				+ monthlyExpenses + ", isReportedByRiskCentral=" + isReportedByRiskCentral + ", status=" + status + "]";
+	}
+
+	
+	
 	
 }

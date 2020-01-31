@@ -2,8 +2,12 @@
 
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
 
- 	<kbase packages="com.example.rules">
-        <ksession name="ksession-rules"/>
+ 	<kbase packages="com.example.credit.opportunity.rules">
+        <ksession name="ksession-statefull"/>
     </kbase>
+
+	<kbase packages="com.example.credit.opportunity.rules">
+    	<ksession name="ksession-stateless" type="stateless"/>
+  	</kbase>
 
 </kmodule>

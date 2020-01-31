@@ -1,15 +1,15 @@
-package com.example.credit.opportunity.rules
+package com.example.rules
 import com.example.drools.model.Person;
 
-rule "Opportunity client"
+rule "Potential Client"
 	dialect "mvel"
     when
         $p: Person(!isReportedByRiskCentral)
     then
-        $p.setStatus("Opportunity");
+        $p.setStatus("Oportunity");
 end
 
-rule "Risk client"
+rule "Descarted"
 	dialect "mvel"
     when
         $p: Person(isReportedByRiskCentral)
